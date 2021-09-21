@@ -25,7 +25,8 @@ namespace AssignmentLibrary.Tests
         public void TestToString()
         {
             ImmutableStudent st = new ImmutableStudent(01, "Gustav","Müller", DateTime.MinValue, DateTime.MaxValue, DateTime.MaxValue);
-            Assert.Equal("ImmutableStudent { id = 1, GivenName = Gustav, Surname = Müller, status = Active, StartDate = 01/01/0001 00:00:00, endDate = 31/12/9999 23:59:59, graduationDate = 31/12/9999 23:59:59 }", st.ToString());
+            var expected = "ImmutableStudent { id = 1, GivenName = Gustav, Surname = Müller, status = Active, StartDate = 1/1/0001 12:00:00 AM, endDate = 12/31/9999 11:59:59 PM, graduationDate = 12/31/9999 11:59:59 PM }";
+            Assert.Equal(expected, st.ToString());
             
         }
     }
