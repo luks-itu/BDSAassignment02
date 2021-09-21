@@ -9,7 +9,7 @@ namespace AssignmentLibrary.Tests
         public void StudentStatusSomething()
         {
             Student st = new Student(01, "Gustav","Müller", DateTime.Now.AddMonths(-1), DateTime.Now.AddMonths(3), DateTime.Now.AddMonths(2));
-            Assert.Equal(st.getStatus(), Stats.Active);
+            Assert.Equal(Stats.Active, st.getStatus());
         }
 
         [Fact]
