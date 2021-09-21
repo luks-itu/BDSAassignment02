@@ -26,6 +26,7 @@ namespace AssignmentLibrary.Tests
         {
             ImmutableStudent st = new ImmutableStudent(01, "Gustav","Müller", DateTime.MinValue, DateTime.MaxValue, DateTime.MaxValue);
             Assert.Equal("ImmutableStudent { id = 1, GivenName = Gustav, Surname = Müller, status = Active, StartDate = 01/01/0001 00:00:00, endDate = 31/12/9999 23:59:59, graduationDate = 31/12/9999 23:59:59 }", st.ToString());
+            
         }
     }
 }

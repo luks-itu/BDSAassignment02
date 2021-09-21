@@ -43,7 +43,7 @@ namespace AssignmentLibrary
 
         public override string ToString()
         {
-            return string.Format("Id: {0}, Name: {1} {2}, Status: {3}, StartDate: {4}, EndDate: {5}, GraduationDate: {6}", id, GivenName,Surname,status,StartDate.ToString(),endDate.ToString(),graduationDate.ToString());
+            return string.Format("Id: {0}, Name: {1} {2}, Status: {3}, StartDate: {4}, EndDate: {5}, GraduationDate: {6}", id, GivenName,Surname,status,StartDate.ToString("MM/dd/yyyy"),endDate.ToString("MM/dd/yyyy"),graduationDate.ToString("MM/dd/yyyy"));
         }
     }
 
