@@ -23,7 +23,10 @@ namespace AssignmentLibrary
 
 
         public Stats getStatus() {
-            if (DateTime.Compare(endDate, graduationDate) < 0) 
+            //Scuffed fix for DateTime.Now.AddMonths(x) not being the same if called twice in immediate succession in constructor.
+            TimeSpan difference = graduationDate.Subtract(endDate);
+
+            if (DateTime.Compare(endDate, graduationDate) < 0 & difference.TotalSeconds > 1) 
             {
                 return Stats.Dropout; 
             }
@@ -67,7 +70,10 @@ namespace AssignmentLibrary
         }
 
         public Stats getStatus() {
-            if (DateTime.Compare(endDate, graduationDate) < 0) 
+            //Scuffed fix for DateTime.Now.AddMonths(x) not being the same if called twice in immediate succession in constructor.
+            TimeSpan difference = graduationDate.Subtract(endDate);
+
+            if (DateTime.Compare(endDate, graduationDate) < 0 & difference.TotalSeconds > 1) 
             {
                 return Stats.Dropout; 
             }
